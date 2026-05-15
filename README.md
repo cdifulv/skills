@@ -1,28 +1,16 @@
 # Claude Skills
 
-A collection of custom [Claude Code skills](https://docs.anthropic.com/en/docs/claude-code).
+A collection of agent skills compatible with any agent that supports the [Agent Skills](https://docs.anthropic.com/en/docs/claude-code) format (Claude Code, Claude Desktop, and other compatible agents).
 
 ## Skills
 
-### TypeScript Code Principles
-
-Enforces 10 core coding principles when writing or reviewing TypeScript/JavaScript code:
-
-1. Early returns over deep nesting
-2. Clear, descriptive names
-3. Single responsibility
-4. Meaningful comments only
-5. DRY for business logic
-6. Fail fast and early
-7. No magic values
-8. Pure functions over side effects
-9. Readable over clever
-10. No premature optimization
-
-Each principle includes bad vs good examples. See [typescript-code-principles/references/principles.md](typescript-code-principles/references/principles.md) for the full reference.
+- **[grill-me](grill-me/)** — Interview the user relentlessly about a plan or design until reaching shared understanding, resolving each branch of the decision tree.
+- **[humanizer](humanizer/)** — Remove signs of AI-generated writing from text and rewrite it in the user's personal voice. Based on Wikipedia's "Signs of AI writing" guide.
+- **[plan-to-issues](plan-to-issues/)** — Convert a plan into issue files, either from the current conversation (e.g., after Plan mode) or from an existing plan file on disk.
+- **[triage-issue](triage-issue/)** — Triage a bug or issue by exploring the codebase to find root cause, then create a markdown issue file with a fix plan.
+- **[typescript-code-principles](typescript-code-principles/)** — Organization coding principles and standards for TypeScript/JavaScript. Enforces 10 core principles when writing, reviewing, or refactoring code.
+- **[write-a-skill](write-a-skill/)** — Create new agent skills with proper structure, progressive disclosure, and bundled resources.
 
 ## Usage
 
-Install a skill by copying its folder into your Claude Code skills directory, or reference it directly in your project configuration.
-
-The skills activate automatically when writing or reviewing code, and can also be triggered explicitly by asking Claude to "review code", "check coding standards", or "apply code principles".
+Install a skill by copying its folder into your agent's skills directory, or reference it directly in your project configuration. Each skill activates automatically based on its description, and can also be triggered explicitly by name.
