@@ -4,3 +4,6 @@
 .claude/
 
 *.skill
+
+humanizer/voice-samples/
+humanizer/voice-profile.md
